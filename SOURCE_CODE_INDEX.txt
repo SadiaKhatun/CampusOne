@@ -1,0 +1,21 @@
+CAMPUSONE SOURCE CODE INDEX
+
+Backend:
+  app.py
+
+Frontend:
+  templates/index.html
+  static/style.css
+  static/app.js
+
+Setup:
+  requirements.txt
+  run_windows.bat
+
+Documentation:
+  README_BANGLA.md
+  CODE_MAP_AND_BEGINNER_MANUAL.md
+  MASTER_PROMPT.md
+  MASTER_UPGRADE_NOTES.md
+
+Open CODE_MAP_AND_BEGINNER_MANUAL.md first.

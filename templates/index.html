@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusOne | Smart Campus Portal</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="login-view" class="login-shell">
+    <section class="login-visual">
+      <div class="brand"><span class="brand-mark">C</span><span>CampusOne</span></div>
+      <div class="visual-copy">
+        <span class="eyebrow">NORTH BENGAL INTERNATIONAL UNIVERSITY</span>
+        <h1>One campus.<br><em>One connected</em> experience.</h1>
+        <p>A simpler way to manage attendance, class routines and campus announcements.</p>
+      </div>
+      <div class="visual-bottom"><span>SMART ATTENDANCE & CAMPUS MANAGEMENT</span><span>v1.0 · DEMO</span></div>
+    </section>
+    <section class="login-side">
+      <div class="login-card">
+        <div class="mobile-brand brand"><span class="brand-mark">C</span><span>CampusOne</span></div>
+        <span class="eyebrow blue">WELCOME BACK</span><h2>Sign in to your portal</h2>
+        <p class="muted">Use your university demo account to continue.</p>
+        <div class="role-switch"><button class="role active" data-role="student">Student</button><button class="role" data-role="teacher">Teacher</button><button class="role" data-role="admin">Admin</button></div>
+        <form id="login-form">
+          <label id="id-label" for="user-id">Student ID</label><input id="user-id" autocomplete="username" placeholder="e.g. S001" required>
+          <label for="password">Password</label><input id="password" type="password" minlength="4" maxlength="12" autocomplete="current-password" placeholder="4–12 characters" required>
+          <div id="login-error" class="error" role="alert"></div>
+          <button class="primary full" type="submit">Sign in <span>→</span></button>
+        </form>
+        <div class="demo-hint"><strong>Demo account</strong><br><span id="demo-account">Student: S001 / student123</span></div>
+      </div>
+      <footer class="login-footer">© 2026 CampusOne · Academic Management Portal</footer>
+    </section>
+  </div>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">C</span><span>CampusOne</span></div>
+      <div class="side-label">WORKSPACE</div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-page="attendance"><span>◷</span> Attendance</button>
+        <button class="nav-item" data-page="courses"><span>▤</span> My Courses</button>
+        <button class="nav-item" data-page="routine"><span>▦</span> Class Routine</button>
+        <button class="nav-item" data-page="notices"><span>♧</span> Notices</button>
+        <button class="nav-item hidden" data-page="users" id="admin-users-nav"><span>♙</span> User Management</button>
+        <button class="nav-item" data-page="profile"><span>◉</span> My Profile</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✦</span><strong>Stay organized</strong><p>Your academic essentials, all in one place.</p></div><button id="logout" class="logout">↪ &nbsp; Sign out</button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div class="topbar-left"><button id="menu-toggle" class="menu-toggle top-menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Open navigation">☰</button><div class="top-brand"><span class="brand-mark">C</span><strong>CampusOne</strong></div><div class="top-heading"><div class="crumb">NBIU / <span id="crumb-page">Dashboard</span></div><h1 id="page-title">Dashboard</h1></div></div><button class="profile profile-trigger" id="profile-shortcut" data-profile-open aria-label="Open profile"><span class="profile-avatar" id="avatar">S</span><span class="profile-copy"><strong id="profile-name">Student</strong><small id="profile-role">Student Portal</small></span></button></header>
+      <div id="content" class="content-area"></div>
+      <footer class="app-footer">© 2026 CampusOne <span>Designed for North Bengal International University</span></footer>
+    </main>
+  </div>
+  <div id="notice-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="notice-modal-title"><section class="detail-modal"><button class="modal-close" id="notice-modal-close" aria-label="Close notice">×</button><span class="eyebrow blue" id="notice-modal-meta">CAMPUS NOTICE</span><h2 id="notice-modal-title">Notice title</h2><p class="modal-date" id="notice-modal-date"></p><div id="notice-modal-body" class="notice-full-text"></div><div id="notice-modal-extra"></div></section></div>
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
