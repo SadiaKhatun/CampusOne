@@ -1,0 +1,132 @@
+.teacher-dashboard{
+    display:grid;
+    gap:22px
+}
+.teacher-hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:26px;
+    border-radius:20px;
+    background:linear-gradient(120deg,#153f45,#21877e);
+    color:#fff
+}
+.teacher-hero h2{
+    font-size:25px;
+    margin:5px 0
+}
+.teacher-hero p{
+    color:#d4f5ef;
+    margin:5px 0
+}
+.teacher-hero 
+.eyebrow{
+    font-size:11px;
+    letter-spacing:1.5px
+}
+.teacher-avatar{
+    width:64px;
+    height:64px;
+    border-radius:20px;
+    background:#ffffff25;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+    font-weight:800
+}
+.teacher-stats{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:16px
+}
+.teacher-stats article{
+    background:#fff;
+    border:1px solid #e4eaf2;
+    border-radius:16px;
+    padding:20px
+}
+.teacher-stats span{
+    display:block;
+    color:#64748b;
+    font-size:13px
+}
+.teacher-stats strong{
+    display:block;
+    font-size:27px;
+    margin-top:10px;
+    color:#17665f
+}
+.panel{
+    background:#fff;
+    border:1px solid #e4eaf2;
+    border-radius:18px;
+    padding:22px
+}
+.panel h2{
+    margin:0 0 7px;font-size:20px
+}
+.muted{
+    color:#64748b;
+    font-size:13px
+}
+.teacher-course-list{
+    display:grid;
+    gap:12px
+}
+.teacher-course{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:15px;
+    border:1px solid #e7edf5;
+    border-radius:13px
+}
+.course-mark{
+    width:42px;
+    height:42px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:#e0f2f1;
+    color:#17665f;
+    font-weight:800
+}
+.course-main{
+    flex:1;
+    display:grid;
+    gap:5px
+}
+.course-main span,.student-count span{
+    font-size:12px;
+    color:#64748b
+}
+.student-count{
+    display:grid;
+    text-align:center;
+    gap:4px
+}
+.teacher-course button,.teacher-actions button{
+    border:1px solid #b9d9d5;
+    background:#effaf8;
+    color:#17665f;
+    border-radius:9px;
+    padding:10px 12px;
+    font-weight:700;
+    cursor:pointer
+}
+.teacher-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap}
+    
+    @media(max-width:700px){
+    .teacher-stats{
+        grid-template-columns:1fr
+    }
+    .teacher-course{
+        align-items:flex-start;
+        flex-wrap:wrap
+    }
+    .course-main{
+        min-width:160px
+    }}

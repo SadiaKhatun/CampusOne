@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: campusone-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: CAMPUSONE_SECRET
+        generateValue: true
+      - key: CAMPUSONE_DB_PATH
+        value: /var/data/campusone.db
+    disk:
+      name: campusone-data
+      mountPath: /var/data
+      sizeGB: 1
